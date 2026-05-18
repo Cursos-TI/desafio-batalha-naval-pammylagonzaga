@@ -20,6 +20,24 @@ int main()
             tabuleiro[linhaV + i][colV] = 3; // Marca a posição do navio no tabuleiro
         }
      
+    int linhaD, colD;
+    for (int i = 0; i < 3; i++)
+    {
+        linhaD = 7 + i; // Exemplo de posição do navio diagonal (linha 8, coluna 5) +1 pois conta o 0;
+        colD = 4 + i;
+        tabuleiro[linhaD][colD] = 3; // Marca a posição do navio no tabuleiro
+    }
+
+    int linhaD2, colD2;
+    for (int i = 0; i < 3; i++)
+    {
+        linhaD2 = 1 + i; // Exemplo de posição do navio diagonal (linha 2, coluna 5 consecutivamente) +1 pois conta o 0;
+        colD2 = 4 - i;
+        tabuleiro[linhaD2][colD2] = 3; // Marca a posição do navio no tabuleiro
+    }
+
+    // -------------------------------- EXIBIÇÃO DO TABULEIRO ------------------ --------------
+
     printf("TABULEIRO BATALHA NAVAL \n");    
     
     for (int i = 0; i < 10; i++)
@@ -43,7 +61,7 @@ int main()
             }
         }
         printf("\n");
-    }    
+    }  
 
     return 0;
 }
